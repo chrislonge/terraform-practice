@@ -101,12 +101,3 @@ resource "aws_security_group" "elb-sg" {
 
 # Declare the data source
 data "aws_availability_zones" "available" {}
-
-variable "server_port" {
-    description = "The port the server will use for HTTP requests."
-    default = 8080
-}
-
-output "elb_dns_name" {
-    value = "${aws_elb.elb.dns_name}"
-}
